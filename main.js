@@ -1,5 +1,9 @@
 const input_box=document.getElementById('input-box');
 const listcontainer=document.getElementById('list-container');
+const taskCount=document.getElementById('task-count');
+function updateCounter(){
+    taskCount.innerHTML = listcontainer.querySelectorAll('li:not(.checked)').length;
+}
 function addTask(){
     if(input_box.value === ''){
         alert("you mask write any thing")
@@ -26,8 +30,10 @@ listcontainer.addEventListener("click", function(e){
 },false);
 function saveData(){
     localStorage.setItem("data", listcontainer.innerHTML);
+    updateCounter();
 }
 function showTask(){
     listcontainer.innerHTML = localStorage.getItem("data")
+    updateCounter();
 }
 showTask();
