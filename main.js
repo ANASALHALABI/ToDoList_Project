@@ -1,11 +1,11 @@
 const input_box=document.getElementById('input-box');
 const listcontainer=document.getElementById('list-container');
 function addTask(){
-    if(input_box.value === ''){
+    if(input_box.value.trim() === ''){
         alert("you mask write any thing")
     }else{
         let li= document.createElement('li');
-        li.innerHTML = input_box.value;
+        li.innerHTML = input_box.value.trim();
         listcontainer.appendChild(li);
         let span= document.createElement('span');
         span.innerHTML = "\u00d7"
