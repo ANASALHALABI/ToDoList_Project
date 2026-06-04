@@ -2,7 +2,7 @@ const input_box=document.getElementById('input-box');
 const listcontainer=document.getElementById('list-container');
 function addTask(){
     if(input_box.value === ''){
-        alert("you mask write any thing")
+        alert("You must write something")
     }else{
         let li= document.createElement('li');
         li.innerHTML = input_box.value;
