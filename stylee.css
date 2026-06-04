@@ -103,3 +103,11 @@ ul li span{
 ul li span:hover{
     background-color: #edeef0;
 }
+.clear-btn{
+    display: block;
+    margin: 25px auto 0;
+    padding: 10px 30px;
+    background: #002765;
+    font-size: 14px;
+    border-radius: 30px;
+}

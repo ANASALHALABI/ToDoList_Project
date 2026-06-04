@@ -24,6 +24,10 @@ listcontainer.addEventListener("click", function(e){
         saveData();
     }
 },false);
+function clearAll(){
+    listcontainer.innerHTML = '';
+    saveData();
+}
 function saveData(){
     localStorage.setItem("data", listcontainer.innerHTML);
 }
